@@ -17,6 +17,24 @@ section.
 Include concrete actions you will take and estimated timeline.
 -->
 
+Over a period of six months our proposal seeks to bring [`routing`](https://github.com/JulioCollazos64/routing),
+a router with the same design as the one used in Express.js, to a well-documented R package
+and to demonstrate its versatility by building a cookies parser middleware on top of it in the form of a
+companion R package, called `cookies` from now on for reference. Concrete actions to be taken include:
+
+- Document thoroughly the inner workings of `routing`'s Router, including common mistakes and best
+  practices, do so by building a package website as is common in the R community.
+- Open a discussion page on the GitHub repository and encourage people to participate and discuss
+ ideas.
+- Share the state of development across social media posts.
+- Create `cookies` in the form of a sibling R package that builds on top of `routing`.
+
+The work is divided in two phases over the course of six months, our estimated timeline is:
+
+* 1-3 months: Polish existing documentation and community testing with the `routing` package.
+* 4-6 months: Develop the `cookies` R package on top of `routing`.
+
+
 ## Detail
 <!--
 Go into more detail about the specifics of the project and how it delivers
@@ -25,11 +43,18 @@ against the problem.
 Depending on project type the detail section should include:
 -->
 
+
+
 ### Minimum Viable Product
 
 <!--
 What is the smallest thing you can build that delivers value to your users?
 -->
+
+The core implementation of `routing` has been already made, as such our next milestone is to
+provide better documentation in the form of a website, built either with `pkgdown` or `altdoc`.
+By providing users a detailed explanation of how the router works we hope to encourage them to
+build their own middleware and benefit the R web community in general.
 
 ### Architecture
 
@@ -37,14 +62,32 @@ What is the smallest thing you can build that delivers value to your users?
 What does the high-level architecture look like?
 -->
 
+`routing` is built to be compatible with [`httpuv`](https://github.com/rstudio/httpuv), 
+the current architecture allows a developer add the missing pieces, such as providing a friendlier way
+of dealing with the request object and/or adding a response class to deal with common scenarios,
+delegating the routing mechanism to `routing`. `routing` is agnostic in this respect and only adds
+functionality every `httpuv` application should adhere to, such as a response being a list
+with headers, body and status code.
+
 ### Assumptions
 
 <!--
 What assumptions are you making that, if proven false, would invalidate the project?
 -->
 
+JavaScript code can be translated to R in a seamless fashion. We are sure this won't be a stopper
+as we've thoroughly tested our R package using the same tests as the [original](https://github.com/pillarjs/router) implementation.
+
 ### External dependencies
 
 <!--
 What external dependencies does the project have (e.g. libraries, services, other projects, etc.)?
 -->
+
+`routing` imports functionality from different R packages, all of which are battle tested
+or have no dependencies at all.
+
+- `R6`: Used to build the Router, Route and Layer classes.
+- `pater`: Allows route matching.
+- `promises`: Provides async support.
+- `httpcode`: HTTP status helper, no dependencies.

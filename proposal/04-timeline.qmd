@@ -12,15 +12,34 @@ important because projects need to get up and running quickly.
  - [ ] Reporting framework
 -->
 
+Most of the project start-up phase has been already delivered, this includes:
+
+- GitHub page as the collaboration and reporting framework.
+- MIT License, as per the original implementation is MIT licensed.
+
+In light of the above, the following activities will be performed during this phase:
+
+- Code of conduct for contributors.
+- GitHub discussion page.
 
 ## Technical delivery
 <!--
 Covering the actual delivery of the project this section should
 provide at least a high-level description of the implementation.
 
-Including target dates is really important as you need to be committed
+Including target dates is really important as you need to be committed M
 and the ISC need to have a means of tracking delivery
 -->
+
+| Month | Milestone | Deliverable |
+|-------|-----------|-------------|
+| 1 | Community setup | GitHub Discussions open for feedback and Code of Conduct |
+| 1 | Complete documentation | Full documentation for `Router`, `Route`, and `Layer` in `routing` |
+| 2-3 | Package website | `pkgdown`/`altdoc` site for `routing` with guides and real-world examples |
+| 4–5 | Cookies parser middleware | `cookies` package developed and documented |
+| 6 | CRAN release | `cookies` submitted to CRAN |
+| 6 | Final report | Submit final report to the R Consortium summarising deliverables, outcomes, and lessons learned |
+
 
 ## Other aspects
 
@@ -37,6 +56,14 @@ to be shared quarterly on the R Consortium blog.
  - [ ] UseR!
  - [ ] ISC meetings
 -->
+
+To make our project reach as many people as possible, we will:
+
+- Write posts and share updates on social media throughout the project.
+- Reach out to R web framework authors to present our work, showing them how `routing` can
+  improve their frameworks.
+
+
 
 ## Budget & funding plan
 
@@ -58,3 +85,9 @@ to the project and the project period. The ISC reserves the right to vet
 how funds are used for each project separately. If in doubt, please reach
 out to us.
 -->
+
+| Milestone | Hours | Cost |
+|-----------|-------|------|
+| Phase 1: Documentation, package website, and community setup (Months 1–3) | 100 | $2,000 |
+| Phase 2: `cookies` middleware development, CRAN submission and report back to R Consortium(Months 4–6) | 100 | $2,000 |
+| **Total** | **200** | **$4,000** |

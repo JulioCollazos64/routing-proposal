@@ -4,3 +4,18 @@
 This section provides a condensed view of the entire proposal, one page long.
 It should be a comprehensive high-level overview that captures the essence of the proposal, including its goals, methods, expected outcomes, deliverables, and budget.
 -->
+
+
+[Express.js](https://expressjs.com/), arguably the most popular Node.js web framework, gave the JavaScript community a
+simple mental model to build web applications, at the heart of it lies its middleware
+routing architecture, we seek to port and document the same ideas that made Express.js routing great to R
+and do it in the most faithful way. Several R packages  ([routr](https://github.com/thomasp85/routr), [ambiorix](https://ambiorix.dev/) 
+and [beakr](https://github.com/MazamaScience/beakr)) 
+have put Express.js as their inspiration for their web frameworks but none of them have a routing system as complete as that of Express.js.
+
+Over the recent months we have ported the pillars of Express.js routing in R packages
+such as [pater](https://cran.r-project.org/web/packages/pater/index.html) and [routing](https://github.com/JulioCollazos64/routing) 
+and now we seek to bring `routing` to a fully documented R package and also build on top of
+it by creating a new cookies parser middleware R package, over the course of six months
+and with $4,000 of funding, this way R web developers can confidently adopt
+`routing` as the building block for their web development projects.

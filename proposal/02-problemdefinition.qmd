@@ -21,4 +21,32 @@ It is important to cover:
 -->
 ```
 
-An example in-text citation [@wickham2016].
+Web development at its core is very simple: a server receives a request from a client, 
+processes it, and returns a response. The devil, however, is in the details.
+Every serious web framework ships with a whole routing mechanism responsible for the 
+"processing" of a request, a foundation from which everything else builds on. R development
+on this front is minimal.
+
+
+When considering the idea of building a web service in R, most R developers turn to R Shiny,
+which offers an architecture different from that of traditional websites, being in essence
+a Single Page Application web framework it has no concept of routes or middleware, it is simply
+not the right tool for the job when it comes to building traditional web applications. 
+There have been previous attempts to provide the foundations for a more traditional web
+framework in R, such as [routr](https://github.com/thomasp85/routr), while this package offers
+novel code it lacks features developers expect such as fine-grained control over request-response
+cycle and proper error handling, another popular alternative is [ambiorix](https://ambiorix.dev/) 
+which resembles Express.js code but it's missing features such as async support in
+middlewares and concepts like route-level middleware, meaning assigning a middleware to 
+a single endpoint is cumbersome.
+
+Any R programmer looking for a way to expose their code as a web service is affected by this
+existing gap, they should be provided with the tools to build any web service they want,
+instead of learning yet another programming language.
+
+Luckily for us, [Express.js](https://expressjs.com/) solved this problem a decade ago in
+a fashion that it's intuitive even for novice programmers. Moreover, countless resources for Express.js
+exist for programmers interested in web development, resources the R community could
+directly benefit from. The R ecosystem has already all the infrastructure needed to support the same
+philosophy and design that make Express.js great, a port of its routing mechanism would give R developers
+a familiar, proven foundation to build web services without having to leave the language.

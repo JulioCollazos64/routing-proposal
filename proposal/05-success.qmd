@@ -9,14 +9,39 @@ thorough understanding going in of what the risks are to delivery
 What does success look like?
 -->
 
+The project is complete when routing is a fully documented package with a package website, and `cookies` is developed, documented, and submitted to CRAN.
+
 ## Measuring success
 <!--
 How will we know when success is achieved, what markers can we use
 along the way
 -->
 
+- `routing` and `cookies` available on CRAN, properly documented.
+- `routing` package website is live with guides and real-world examples
+- GitHub Discussions page is active with community participation.
+
 ## Future work
 <!--
 How could this be extended / developed in the future by yourself
 and/or the community in general?
 -->
+
+We hope `routing` becomes what [`router`](https://github.com/pillarjs/router) became in the JavaScript 
+ecosystem, a pillar upon which numerous other packages are built, the possibilities are vast:
+authentication middleware, rate limiting, logging, etc. This way the web ecosystem in R
+could develop to a more mature ecosystem.
+
+## Key risks
+
+- A single developer working on the project, this is mitigated by the fact that the
+core implementation is complete and the project is MIT Licensed so that the 
+community can pick up the project easily.
+
+- Most R packages nowadays are pipe friendly, this project is not and doesn't plan to do so,
+however numerous resources exist for those willing to learn Object Oriented Programming in R
+such as the [R6 Documentation](https://r6.r-lib.org/).
+
+- `routing` provides only the routing mechanism and delegates many functionalities
+developers expect out of the box such as authentication, logging, etc. The documentation
+will address this in a way that R developers can build their own middleware packages.
